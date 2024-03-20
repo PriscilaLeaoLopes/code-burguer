@@ -1,13 +1,13 @@
-module.exports = {
-  dialect: 'postgres', 
+const { Sequelize } = require('sequelize');
+
+const sequelize = new Sequelize('codeburguer', 'postgres', 'postgres', {
   host: 'localhost',
-  username: 'postgres',
-  password: 'postgres',
-  database: 'codeburguer',
+  dialect: 'postgres',
   define: {
-    timespamps: true, 
+    timestamps: true,
     underscored: true,
     underscoredAll: true,
-    
-},
-}
+  },
+});
+
+module.exports = sequelize;

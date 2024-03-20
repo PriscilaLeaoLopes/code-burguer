@@ -5,7 +5,8 @@ module.exports = {
   },
   extends: [
     'standard',
-    'prettier'
+    'prettier',
+    'database'
   ],
 
   overrides: [
